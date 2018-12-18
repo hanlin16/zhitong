@@ -1,0 +1,49 @@
+server:
+  port: 8003
+#  port: ${random.int[9000,9999]}
+spring:
+  application:
+    name: yto-bm-service-test
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.55.254:3306/yto?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    username: ceshidb
+    password: Ceshi123
+    druid:
+      initial-size: 5
+      max-active: 20
+      min-idle: 5
+      max-wait: 1234
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 5
+      validation-query: select 1
+      validation-query-timeout: 1
+      test-on-borrow: true
+      test-on-return: true
+      test-while-idle: true
+      web-stat-filter:
+        enabled: true
+        url-pattern: /druid/*
+        exclusions:
+      stat-view-servlet:
+        enabled: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.55.39:8001/eureka
+#  instance:
+#    instance-id: ${spring.application.name}${random.int}
+mybatis:
+  type-aliases-package: com.demos.springcloud.model
+  configuration:
+    map-underscore-to-camel-case: true
+logging: 
+  config: classpath:log4j2.xml
+deviceApplyUrlPrefix: http://ubi.ztwltech.com/device/deviceApply
+service:
+  application:
+    name: yto-bm-service-test
+usermessage:
+  code: ubiuser
+messageUrl: http://192.168.55.19:8882/pigeon-web/mqMessage/pubMsg.shtml
+message_environment: \u6d4b\u8bd5\u73af\u5883

@@ -1,0 +1,857 @@
+/*气泡提示框*/
+/*arrow_box为气泡主体，加样式arrow_box_t为上尖角气泡，
+			 ，加样式arrow_box_b为下尖角气泡，
+			 ，加样式arrow_box_r为右尖角气泡，
+			 ，加样式arrow_box_l为左尖角气泡，
+			 例子：<div class="arrow_box arrow_box_t">
+					css3气泡框
+				</div>
+			*/
+
+.arrow_box {
+	position: relative;
+	min-height: 50px;
+	background: #FFFFFF;
+	border: 1.5px solid #c2e1f5;
+	border-radius: 10px;
+	margin: 0px 10px;
+	margin-top: 20px;/*要高于border-width给尖角留位置*/
+}
+
+.arrow_box:after,
+.arrow_box:before {
+	/*bottom: 100%;*/
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(136, 183, 213, 0);
+	/*border-bottom-color: #FFFFFF;*/
+	border-width: 10px;
+}
+
+.arrow_box:before {
+	border-color: rgba(194, 225, 245, 0);
+	/*border-bottom-color: #FFFFFF;*/
+	border-width: 12px;
+}
+
+
+/*下尖角*/
+
+.arrow_box_b:before {
+	/*这里的margin-left比after里的多出的就是尖角边框的厚度*/
+	margin-left: -12px;
+	border-top-color: #c2e1f5;
+}
+
+.arrow_box_b:after {
+	margin-left: -10px;
+	border-top-color: #FFFFFF;
+}
+
+.arrow_box_b:after,
+.arrow_box_b:before {
+	top: 100%;
+	/*这里的left控制尖角的位置*/
+	left: 20%;
+}
+
+
+/*上尖角*/
+
+.arrow_box_t:before {
+	margin-left: -12px;
+	border-bottom-color: #c2e1f5;
+}
+
+.arrow_box_t:after {
+	margin-left: -10px;
+	border-bottom-color: #FFFFFF;
+}
+
+.arrow_box_t:after,
+.arrow_box_t:before {
+	bottom: 100%;
+	left: 20%;
+}
+
+
+/*左尖角*/
+
+.arrow_box_l:before {
+	margin-top: -12px;
+	border-right-color: #c2e1f5;
+}
+
+.arrow_box_l:after {
+	margin-top: -10px;
+	border-right-color: #FFFFFF;
+}
+
+.arrow_box_l:after,
+.arrow_box_l:before {
+	right: 100%;
+	top: 30%;
+}
+
+
+/*右尖角*/
+
+.arrow_box_r:before {
+	margin-top: -12px;
+	border-left-color: #c2e1f5;
+}
+
+.arrow_box_r:after {
+	margin-top: -10px;
+	border-left-color: #FFFFFF;
+}
+
+.arrow_box_r:after,
+.arrow_box_r:before {
+	left: 100%;
+	top: 30%;
+}
+
+
+/*勾*/
+
+.cwj_gou {
+	display: inline-block;
+	width: 6px;
+	height: 2px;
+	background: red;
+	line-height: 0;
+	font-size: 0;
+	vertical-align: middle;
+	-webkit-transform: rotate(45deg);
+}
+
+.cwj_gou:after {
+	content: '/';
+	display: block;
+	width: 12px;
+	height: 2px;
+	/*background: red;*/
+	background: white;
+	-webkit-transform: rotate(-90deg) translateY(-50%) translateX(50%);
+}
+
+
+/*×叉叉*/
+
+.cwj_X {
+	display: inline-block;
+	width: 20px;
+	height: 3px;
+	background: red;
+	line-height: 0;
+	font-size: 0;
+	vertical-align: middle;
+	-webkit-transform: rotate(45deg);
+}
+
+.cwj_X:after {
+	content: '/';
+	display: block;
+	width: 20px;
+	height: 3px;
+	background: red;
+	-webkit-transform: rotate(-90deg);
+}
+
+.cwj_item {
+	width: 100%;
+}
+
+.cwj_container {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	-webkit-box-orient: vertical;
+	flex-direction: column;
+	-moz-flex-direction: column;
+	-webkit-flex-direction: column;
+	/*height: 100%;*/
+	overflow-y: auto;
+}
+
+.cwj_v_flex_container {
+	height: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	-moz-flex-direction: column;
+}
+
+
+/*子元素显顺序 从左到右 和 从右到左*/
+
+.cwj_left_to_right {
+	-webkit-box-direction: normal;
+	-webkit-box-orient: horizontal;
+	-moz-flex-direction: row;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+}
+
+.cwj_right_to_left {
+	-webkit-box-pack: end;
+	-webkit-box-direction: reverse;
+	-webkit-box-orient: horizontal;
+	-moz-flex-direction: row-reverse;
+	-webkit-flex-direction: row-reverse;
+	flex-direction: row-reverse;
+}
+
+
+/*单行*/
+
+.cwj_row {
+	/*background-color: red;*/
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding: 0px 10px;
+}
+
+.cwj_row_no {
+	/*没有内边距*/
+	/*background-color: red;*/
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+
+/*自动换行*/
+
+.cwj_auto_line {
+	-ms-flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+
+/*撑满剩余空间*/
+
+.cwj_row_flex {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	/*-webkit-box-flex: 1.0;
+	-moz-flex-shrink: 1;
+	-webkit-flex-shrink: 1;
+	flex-shrink: 1;*/
+}
+
+.cwj_row_flex2 {
+	-webkit-box-flex: 2;
+	-webkit-flex: 2;
+	-ms-flex: 2;
+	flex: 2;
+}
+
+.cwj_row_flex3 {
+	-webkit-box-flex: 3;
+	-webkit-flex: 3;
+	-ms-flex: 3;
+	flex: 3;
+}
+
+.cwj_row_span {
+	font-size: 15px;
+}
+
+
+/*竖直撑满剩余空间*/
+
+.cwj_row_flex_v {
+	-webkit-box-orient: vertical;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.cwj_center_v {
+	/*子元素竖直居中和cwj_row一起用*/
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.cwj_center_h {
+	/*子元素水平居中和cwj_row一起用*/
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.cwj_space_between {
+	/*子元素左右两端对齐和cwj_row一起用,子元素不要有flex*/
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.cwj_right_txt {
+	padding: 5px 0px;
+	font-size: 15px;
+}
+
+.cwj_ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	/* Opera 9-10 */
+	white-space: nowrap;
+	width: 100%;
+}
+
+
+/*两行省略   jquery weui中样式am-list-item-text有这个效果*/
+
+.cwj_ellipsis_2 {
+	text-overflow: -o-ellipsis-lastline;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	-o-text-overflow: ellipsis;
+	/* Opera 9-10 */
+	text-overflow: ellipsis;
+	/* IE, WebKit (Safari, Chrome), Firefox 7, Opera 11 */
+}
+
+.cwj_ellipsis_3 {
+	text-overflow: -o-ellipsis-lastline;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	-o-text-overflow: ellipsis;
+	/* Opera 9-10 */
+	text-overflow: ellipsis;
+	/* IE, WebKit (Safari, Chrome), Firefox 7, Opera 11 */
+}
+
+.cwj_botton {
+	background-color: #007AFF;
+	width: 80px;
+	text-align: center;
+	padding: 5px;
+	border-radius: 5px;
+	color: white;
+	margin-top: 10px;
+	font-size: 13px;
+}
+
+.cwj_botton:active {
+	background-color: #007AFF;
+	opacity: 0.3;
+	-moz-opacity: 0.3;
+	-webkit-opacity: 0.3;
+}
+
+.h_line {
+	background-color: #EEEEEE;
+	/*background-color: #000000;*/
+	height: 1px;
+	margin: 0px 10px;
+}
+
+.v_line {
+	background-color: #EEEEEE;
+	height: 30px;
+	width: 2px;
+	margin: 5px 0px;
+}
+
+.cwj_input_label {
+	line-height: 40px;
+	font-size: 14px;
+}
+
+.cwj_input_label_50 {
+	line-height: 50px;
+	font-size: 14px;
+}
+
+.cwj_row_label {
+	line-height: 30px;
+	font-size: 14px;
+	padding-right: 5px;
+	color: rgb(51, 51, 51);
+}
+
+.cwj_input_right {
+	/*width: 30px;*/
+	height: 40px;
+	line-height: 40px;
+	padding: 0px 5px;
+	float: right;
+	text-align: center;
+	position: absolute;
+	right: 5px;
+}
+
+.cwj_clearStyle {
+	height: 20px;
+	width: 20px;
+	/*margin-top: 10px;*/
+}
+
+.cwj_row_input {
+	border: none;
+	outline: none;
+	/*去除选中时的边框*/
+	height: 40px;
+	padding: 0px 5px;
+	font-size: 14px;
+}
+
+.cwj_row_input_50 {
+	border: none;
+	outline: none;
+	/*去除选中时的边框*/
+	height: 50px;
+	padding: 0px 5px;
+	font-size: 14px;
+}
+
+.cwj_bottom_botton {
+	height: 40px;
+	width: 90%;
+	/*background-color: red;*/
+	margin-left: 5%;
+	position: fixed;
+	bottom: 10px;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 40px;
+	color: white;
+	font-size: 14px;
+}
+
+.cwj_yzm_botton {
+	height: 22px;
+	background-color: rgb(88, 160, 255);
+	border-radius: 5px;
+	text-align: center;
+	line-height: 25px;
+	color: white;
+	font-size: 10px;
+	padding: 2px 3px;
+}
+
+.cwj_yzm_botton:active {
+	-webkit-opacity: 0.5;
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: .5;
+	filter: alpha(opacity=50);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+}
+
+.cwj_bottom_botton:active {
+	/* older safari/Chrome browsers */
+	-webkit-opacity: 0.5;
+	/* Netscape and Older than Firefox 0.9 */
+	-moz-opacity: 0.5;
+	/* Safari 1.x (pre WebKit!) 老式khtml内核的Safari浏览器*/
+	-khtml-opacity: 0.5;
+	/* IE9 + etc...modern browsers */
+	opacity: .5;
+	/* IE 4-9 */
+	filter: alpha(opacity=50);
+	/*This works in IE 8 & 9 too*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	/*IE4-IE9*/
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+}
+
+.cwj_circle {
+	height: 12px;
+	width: 12px;
+	border: 1px solid rgb(136, 136, 136);
+	border-radius: 50%;
+}
+
+
+/*tab*/
+
+.display-none {
+	display: none;
+}
+
+.tab {
+	background-color: rgb(248, 248, 248);
+	width: 100%;
+	height: 50px;
+	position: fixed;
+}
+
+.tab ul {
+	height: 40px;
+	position: fixed;
+	width: 100%;
+	list-style-type: none;
+	overflow: hidden;
+	background-color: white;
+	/*margin: 5px 5%;*/
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	border-radius: 5px;
+}
+
+.tab ul li {
+	float: left;
+	height: 40px;
+}
+
+.tab ul li {
+	border-radius: 0;
+	text-align: center;
+	background-color: white;
+	width: 100%;
+	/*border-bottom:3px solid #eee;*/
+}
+
+.tab ul li a {
+	height: 40px;
+	display: inline-block;
+	width: 100%;
+	padding: 10px 0;
+	text-decoration: none;
+	color: rgb(51, 51, 51);
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.tab ul li.active {
+	background-color: rgb(86, 160, 255);
+	/*background-color:#007AFF;*/
+	border-radius: 5px;
+	/*border-bottom:3px solid #81a2cd*/
+}
+
+.tab ul li.active p {
+	color: #fff;
+	font-size: 14px;
+}
+
+
+/*下三角*/
+
+.cwj_down {
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid rgb(205, 205, 205);
+}
+
+
+/*上三角*/
+
+.cwj_top {
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid rgb(205, 205, 205);
+}
+
+
+/*右三角*/
+
+.cwj_right {
+	width: 0;
+	height: 0;
+	border-left: 10px solid rgb(205, 205, 205);
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+}
+
+
+/*右括号*/
+
+.cwj_right_kh {
+	width: 0;
+	height: 0;
+	border-left: 8px solid rgb(205, 205, 205);
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+}
+
+.cwj_right_kh:after,
+.cwj_right_kh:before {
+	content: "";
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	border-left: 8px solid white;
+	position: absolute;
+	margin-left: -10px;
+	margin-top: -8px;
+}
+
+
+/*下括号*/
+
+.cwj_bottom_kh {
+	width: 0;
+	height: 0;
+	border-top: 6px solid rgb(205, 205, 205);
+	border-right: 6px solid transparent;
+	border-left: 6px solid transparent;
+}
+
+.cwj_bottom_kh:after,
+.cwj_bottom_kh:before {
+	content: "";
+	border-right: 6px solid transparent;
+	border-left: 6px solid transparent;
+	border-top: 6px solid white;
+	position: absolute;
+	margin-left: -6px;
+	margin-top: -8px;
+}
+
+.cwj_bottom_kh_sel:after,
+.cwj_bottom_kh_sel:before {
+	content: "";
+	border-right: 6px solid transparent;
+	border-left: 6px solid transparent;
+	border-top: 6px solid rgb(245, 110, 35);
+	position: absolute;
+	margin-left: -6px;
+	margin-top: -8px;
+}
+
+
+/*左三角*/
+
+.cwj_left {
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-right: 10px solid rgb(205, 205, 205);
+}
+
+
+/*遮罩层*/
+
+.cwj_backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 998;
+	background-color: rgba(0, 0, 0, .3);
+	margin-top: 41px;
+}
+
+.cwj_nodata {
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	margin-top: 10px;
+	background-color: #F8F8F8;
+	font-size: 14px;
+}
+
+
+/*加载等待*/
+
+#loadingDiv {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	background-color: #000000;
+	height: 100px;
+	width: 100px;
+	z-index: 999;
+	border-radius: 5px;
+	margin-top: -50px;
+	margin-left: -50px;
+	text-align: center;
+	-webkit-opacity: 0.6;
+	-moz-opacity: 0.6;
+	-khtml-opacity: 0.6;
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+}
+
+#loadingBg {
+	display: none;
+	text-align: center;
+	position: fixed;
+	background-color: transparent;
+	z-index: 111;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	height: 100%;
+}
+
+#loadingTxt {
+	color: white;
+	position: relative;
+	margin-top: 65px;
+	font-size: 12px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	/* Opera 9-10 */
+	white-space: nowrap;
+	width: 100%;
+}
+
+
+/*自定义弹窗*/
+
+.cwj_model_bg {
+	text-align: center;
+	position: absolute;
+	z-index: 888;
+	background-color: #000000;
+	-webkit-opacity: 0.5;
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+}
+
+#cwj_model_Div {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	background-color: white;
+	height: 200px;
+	width: 200px;
+	z-index: 999;
+	border-radius: 5px;
+	margin-top: -100px;
+	margin-left: -100px;
+	text-align: center;
+}
+
+
+/*顶部导航*/
+
+.cwj_header {
+	display: flex;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	text-align: center;
+	line-height: 40px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	background: #000000;
+	color: #fff;
+}
+
+
+/*标题*/
+
+.cwj_header span {
+	flex: 2;
+	-webkit-box-flex: 2;
+	-webkit-flex: 2;
+	-ms-flex: 2;
+	font-size: 16px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+
+/*左右div*/
+
+.cwj_header div {
+	flex: 1;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	padding: 0px 10px;
+}
+
+.cwj_header .cwj_header_left {
+	text-align: left;
+}
+
+.cwj_header .cwj_header_right {
+	text-align: right;
+}
+
+
+/*tab菜单*/
+
+.cwj_nav {
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+
+.cwj_nav p {
+	display: inline-block;
+	width: 30%;
+	padding: 10px 0;
+}
+
+.cwj_nav .active {
+	border-bottom: 1px solid #FF6990;
+	color: #FF6990;
+}
+
+/*标签自动换行*/
+.cwj_wrap{
+	min-height: 80px;
+	display: block;
+	word-break: break-all;
+	word-wrap: break-word;
+	padding: 5px;
+	text-align: center;
+}
+.cwj_wrap_row{
+	width: 33.3%;
+	height: 100px;
+	text-align: center;
+	float: left;
+	padding: 5px 0px;
+	margin-bottom: 10px;
+}

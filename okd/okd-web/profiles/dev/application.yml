@@ -1,0 +1,36 @@
+server:
+  port: 8007
+spring:
+  application:
+    name: ${web.application.name}
+  freemarker:
+    template-loader-path: classpath:/templates/views/ #模板加载路径 按需配置
+    settings:
+      number_format: 0.##
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.55.39:8001/eureka
+ribbon:
+  ReadTimeout: 120000
+  ConnectTimeout: 30000
+logging: 
+  config: classpath:log4j2.xml
+business:
+  url:
+     callurl: http://ubi.ztwltech.com/pay/callPay
+     call_payresult_url: http://ubi.ztwltech.com/pay/callPayResult  
+     wechat_authorize_url: https://open.weixin.qq.com/connect/oauth2/authorize
+     wechat_order_url: https://api.mch.weixin.qq.com/pay/unifiedorder
+     wechat_token_url: https://api.weixin.qq.com/sns/oauth2/access_token
+     device_url: http://ubi.ztwltech.com/device/deviceApply
+     zt_quote_price_url: https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxec32cb0a3903f37f&redirect_uri=http%3A%2F%2Fwx-test.ztwltech.com%2Fzkyq-weixin%2FforwardUrl&response_type=code&scope=snsapi_base&state=MpIWTupHS3dz9EGX
+     wechat_jssdk_token: https://api.weixin.qq.com/cgi-bin/token
+     wechat_jsapi_ticket: https://api.weixin.qq.com/cgi-bin/ticket/getticket
+  account:
+     appId: wxdc505606067574e7
+     mch_id: 1513680891
+     key: ab7d753610f34a349575f8c8cf08d199
+     secret: f281c84d6a7f5ef064c8f145cea511b9
+  smsSendcode: YTCHECKCODE
+  messageurl: http://192.168.55.39:8089/sendSms

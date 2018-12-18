@@ -1,0 +1,762 @@
+/**
+********page style*******
+**/
+.page{ 
+	width: 32rem;
+	margin: 0 auto;
+	padding: 0;
+	font-size: 1.1rem;
+}
+
+@media only screen and (max-width: 383px){ 
+	.page{ 
+		width: 100%;
+	}
+}
+
+html,body{  
+  margin:0px;  
+  font-size: 14px;
+  background: #fff;
+  font-family: 'PingFang SC','Microsoft YaHei',SimHei,Arial,SimSun;
+} 
+input::-webkit-input-placeholder{
+	color:#ccc;
+}
+input:-moz-placeholder{ 
+	color:#ccc;
+}
+input::-moz-placeholder{ 
+	color:#ccc;
+}
+input:-ms-input-placeholder{ 
+	color:#ccc;
+}
+.icon{ 
+	display: inline-block;
+}
+.icon.advise{ 
+	background: url(../images/tip.png) no-repeat;
+	background-size: contain;
+	width: 1.5rem;
+	height: 2rem;
+}
+.icon.turn{ 
+	background: url(../images/turn.png) no-repeat;
+	background-size: contain;
+	width: 1.5rem;
+	height: 2rem;
+}
+.icon.accelerate{ 
+	background: url(../images/accelerate.png) no-repeat;
+	background-size: contain;
+	width: 2rem;
+	height: 2rem;
+}
+.icon.decelerate{ 
+	background: url(../images/decelerate.png) no-repeat;
+	background-size: contain;
+	width: 2rem;
+	height: 2rem;
+}
+.icon.increace{ 
+	background: url(../images/increace.png) no-repeat;
+	background-size: contain;
+	width: 1.4rem;
+	height: 1rem;
+}
+.icon.descend{ 
+	background: url(../images/descend.png) no-repeat;
+	background-size: contain;
+	width: 1.4rem;
+	height:1rem;
+}
+.greyBg{ 
+	background: #f4f5f9;
+}
+.gradientBg{ 
+	background: -webkit-linear-gradient(#512457,#18244f);
+	background: -o-linear-gradient(#512457,#18244f); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(#512457,#18244f); /* Firefox 3.6 - 15 */
+	background: linear-gradient(#512457,#18244f); /* 标准的语法 */
+	color: #ddd;
+}
+.right-icon{
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-right: 0.2rem solid #ddd;
+    border-bottom: 0.2rem solid #ddd;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    position: absolute;
+    background-position:-133px -102px;
+}
+
+.small.right-icon{ 
+	width: 0.8rem;
+    height: 0.8rem;
+	border-right: 0.1rem solid #ddd;
+    border-bottom: 0.1rem solid #ddd;
+
+}
+/**
+***----------page style  end--------***
+**/
+.equipmentState{ 
+	float: right;
+	font-size: 1px;
+	line-height: 4rem;
+	margin-right: 1rem;
+}
+.equipmentState.online{ 
+
+	color: #5dcd3e;
+}
+.topTip{ 
+	background: #f5f5f5;
+	padding:0 1rem;
+	line-height: 2.2rem;
+	font-size: 1rem;
+}
+.bankList{ 
+	padding: 1rem;
+}
+
+.bankList .bankCard{ 
+	border:1px dashed #aaa;
+	border-radius: 0.4rem;
+	background: #fff;
+	padding: 1rem 2rem;
+}
+.bankList .bankCard h5{ 
+	margin: 0;
+	height: 3rem;
+}
+.bankList .bankCard img{ 
+	height: 100%;
+}
+.bankList .bankCard  p{ 
+	margin: 0 2rem;
+	font-size: 1rem;
+}
+.bankList .bankCard  .cardID{ 
+	font-size: 2rem;
+	height: 3rem;
+	font-weight: 300;
+	text-align: center;
+}
+.bankList .bankCard  .cardID .encrypt{ 
+	line-height: 4rem;
+    float: left;
+    margin-left: 1.5rem;
+}
+.bankList .bankCard  .cardID .arrears{ 
+	line-height: 3rem;
+	color: #333;
+}
+.wDeposit.form-group { 
+	font-size: 2.4rem;
+	border-top: none;
+	border-bottom: 0.1rem  solid #eee;
+	line-height: 4rem;
+}
+.topTitle{ 
+	font-size: 1.2rem;
+	line-height: 3rem;
+	padding: 0 1rem;
+	margin: 0;
+}
+.tip{ 
+	color: #ff5858;
+	padding: 0 1rem;
+	line-height: 2rem;
+	font-size: 1rem;
+}
+.integral .big-header{
+	background: #ff9d00;
+	color: #fff;
+	text-align: center;
+	padding:2rem;
+}
+.big-header .money{ 
+	font-size: 3rem;
+}
+.big-header .text{ 
+	font-size: 1.2rem;
+}
+.big-header p{ 
+	margin: 0;
+	line-height: 3rem;
+}
+.big-header .btn{ 
+	border-radius: 1.3rem;
+	height: 2.6rem;
+	border: 1px solid #fff;
+	width: 8rem;
+	display: inline-block;
+	color: #fff;
+	line-height: 2.4rem;
+	font-size: 1.3rem;
+
+}
+
+.dravingRecord .big-header{ 
+
+}
+.dravingRecord .big-header .tip{ 
+	font-size: 0.9rem;
+	color: #ff9d00;
+}
+.dravingRecord .big-header .pull-right{ 
+	float: right;
+}
+.nav-menu { 
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+}
+.nav-menu li{ 
+	-moz-box-flex:1; /* Firefox */
+	-webkit-box-flex:1; /* Safari 和 Chrome */
+	-ms-box-flex:1; /* Safari 和 Chrome */
+	box-flex:1;
+	font-size: 1.1rem;
+	width: 100%;
+	text-align: center;
+	border-left: 1px solid #eee;
+}
+
+.nav-menu li:first-child{ 
+	border-left: none;
+}
+.nav-menu li a{ 
+	display: inline-block;
+	line-height: 3rem;
+	padding: 0 0.5rem;
+	color: #666;
+}
+.nav-menu li a.active{ 
+	border-bottom: 0.2rem solid #ff9d00;
+}
+
+.dataList{ 
+	margin: 0;
+}
+.dataList .title{ 
+	background: #f5f5f5;
+	border-bottom:1px solid #ddd; 
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+	line-height: 1.8rem;
+	font-weight: normal;
+
+}
+.dataList .title p{ 
+	margin: 0;
+}
+.dataList .lists{ 
+	padding-left:1.4rem;
+	margin: 0;
+	list-style: none;
+}
+.dataList .item{ 
+	border-bottom: 1px solid #ddd;
+	padding:1rem 0 0 0;
+}
+.dataList .item h5{ 
+	border-left: 0.2rem solid #ff9d00;
+	margin: 0;
+	line-height: 1.6rem;
+	font-size: 1.4rem;
+	padding-left: 0.5rem;
+}
+.dataList .item p{ 
+	font-size: 1rem;
+	line-height: 3rem;
+	color: #bbb;
+	margin: 0;
+
+}
+.driving-counts li{ 
+	float: left;
+	overflow: hidden;
+	width: 33%;
+	text-align: center;
+	margin-bottom: 1rem;
+
+}
+.driving-counts li p{ 
+	font-size: 1.1rem;
+	line-height: 1.5rem
+}
+.driving-counts li p.times{ 
+	font-size: 3rem;
+	line-height: 3rem;
+	color:#ff9d00;
+	font-weight: 300;
+
+
+}
+.panel .header{ 
+	background: #f5f5f5;
+	line-height: 2.6rem;
+	font-size: 1.2rem;
+	padding:0 1rem; 
+	margin: 0;
+}
+.panel .header a{ 
+	float: right;
+	color: #999;
+}
+.panel .header .right-icon{ 
+	position: static;
+}
+.panel .content{ 
+	padding:1rem; 
+} 
+#pie{ 
+	width: 14rem;
+	height: 14rem;
+	margin: 0 auto;
+}
+#lineChart{ 
+	width:32rem;
+	height: 20rem;
+	margin: 0 auto;
+} 
+.driveCordList .item{ 
+	width: 100%;
+	height: 12rem;
+	background: url(../images/mapBg.jpg);
+	color: #ddd;
+	padding: 1rem;
+	margin-bottom: 0.5rem;
+}
+.driveCordList .item a{ 
+	color: #ddd;
+}
+.driveCordList .item p{ 
+	font-size: 1rem;
+}
+.driveCordList .item .mileageInfo{ 
+	margin-top: 6rem;
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+}
+.driveCordList .item .mileageInfo span{ 
+	-moz-box-flex:1; /* Firefox */
+	-webkit-box-flex:1; /* Safari 和 Chrome */
+	-ms-box-flex:1; /* Safari 和 Chrome */
+	box-flex:1;
+	width: 100%;
+	text-align: center;
+	font-size: 1rem;
+	border-left: 0.1rem solid #fff;
+}
+.driveCordList .item .mileageInfo span:first-child{ 
+	border-left: none;
+}
+
+.trajectory .dataInfo{ 
+	position: absolute;
+	bottom: 0;
+	background: #fff;
+
+}
+#mapwrp{ 
+	height: 100%;
+
+} 
+#mapwrp img{ 
+	width: 100%;
+}
+.tipBar{ 
+	position: fixed;
+	background: #fff;
+	border-radius: 3rem;
+	height:3rem;
+	width: 8rem;
+	text-align: center;
+	right: 2rem;
+	bottom: 22rem;
+	line-height: 3rem;
+	color: #ff9d00;
+	font-size: 1.2rem;
+	
+}
+.tipBar a{ 
+	color: #ff9d00;
+}
+.tipBar .icon{ 
+	vertical-align: middle;	
+	margin-right: 0.5rem;
+}
+
+.adviceList{ 
+	font-size: 1.2rem;
+	color: #666;
+}
+.adviceList .item{ 
+	width: 100%;
+	padding: 2rem;
+}
+.adviceList .item .title .time{ 
+	float: right;
+}
+.adviceList .item .title .icon{ 
+	vertical-align: middle;
+	margin-right: 1rem;
+}
+.adviceList .item .content{ 
+	background: #fff;
+	padding: 1rem;
+	border-bottom-left-radius:2rem; 
+	border-bottom-right-radius:2rem; 
+	border-top-right-radius:2rem; 
+}
+.driveReportList{ 
+
+}
+.driveReportList .item{ 
+	width: 100%;
+	margin-bottom: 0.5rem;
+	height: 14rem;
+	color: #fff;
+}
+.driveReportList .item.week{ 
+	background: url(../images/weekBg.jpg);
+}
+
+.driveReportList .item.moonth{ 
+	background: url(../images/moonthBg.jpg);
+}
+.driveReportList .item p{ 
+	text-align: center;
+	margin: 0;
+	color: #ddd;
+}
+.driveReportList .item .timeSection{ 
+	font-size: 1rem;
+	text-align: left;
+	line-height: 3rem;
+	padding: 0 1rem;
+}
+.driveReportList .item .title{ 
+	font-size: 3.6rem;
+	text-shadow:0.2rem 0.2rem  0.2rem  #666;
+	text-align: center;
+	line-height: 5rem;
+	color: #fff;
+}
+.driveReportList .item.moonth  .title{  
+		line-height: 7.2rem;
+}
+
+.driveReportList .item .year{ 
+	width: 6rem;
+	height: 2.2rem;
+	line-height: 2.4rem;
+	font-size: 1.4rem;
+	border-radius: 4rem;
+	box-shadow: 0.1rem 0.1rem 0.5rem  #666,0.1rem -0.1rem 0.4rem  #fff inset;
+	text-align: center;
+	background: #eee;
+	color: #666;
+	display: inline-block;
+
+}
+.driveReportList .item  .week{ 
+	font-size: 1.5rem;
+	text-align: center;
+	color: #fff;
+	text-shadow:0.1rem 0.1rem  0.2rem  #666;
+	line-height: 4rem;
+
+}
+.report .header { 
+	padding: 2rem 1rem;
+}
+.report p{ 
+	text-align: center;
+	margin: 0;
+}
+.report  .timeSection{ 
+	line-height: 2rem;
+}
+.report .header .cord{ 
+	font-size: 7rem;
+}
+
+.report .header .cord.moonth{ 
+	font-size: 4rem;
+}
+
+.report .header  .blue{ 
+	color: #06c3ce
+}
+.portMainInfo { 
+	padding: 0 1.5rem;
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+
+}
+.portMainInfo  label{ 
+	-moz-box-flex:1; /* Firefox */
+	-webkit-box-flex:1; /* Safari 和 Chrome */
+	-ms-box-flex:1; /* Safari 和 Chrome */
+	box-flex:1;
+	display: block;
+	width: 100%;
+	box-shadow: 0 0 0.1rem #4f3c73;
+	background: rgba(0,0,0,0.1);
+	padding: 1rem;
+	font-size: 1.1rem;
+}
+.portMainInfo  label .big{ 
+	font-size: 1.5rem;
+	line-height: 2.6rem;
+}
+.portMainInfo  label a{ 
+	background: #ff9d00;
+	color: #fff;
+	border-radius: 0.3rem;
+	font-size: 1rem;
+	width: 3.6rem;
+	height: 1.8rem;
+	line-height:  1.8rem;
+	display: inline-block;
+	vertical-align: top;
+	margin-left:1rem;
+	margin-top: 0.3rem; 
+	box-shadow: 0 0 0.2rem #000;
+}
+.report h5{ 
+	font-size: 1rem;
+	margin: 0;
+	line-height: 2rem;
+
+}
+.portInfo{ 
+	padding: 0.5rem 1.5rem;
+}
+.portInfo h5 label{ 
+	margin-left: 1rem;
+	font-size: 0.8rem;
+}
+
+.portInfo .driving-counts li{ 
+	box-shadow: 0 0 0.1rem #4f3c73;
+	background: rgba(0,0,0,0.1);
+	padding: 1rem;
+}
+.portInfo .driving-counts  p{ 
+	font-size: 1rem;
+}
+.portInfo .driving-counts .times{ 
+	color: #fff;
+	font-size: 2.2rem;
+	position: relative;
+}
+.portInfo .driving-counts .icon{ 
+	position: absolute;
+	right: 0;
+    top: 1.2rem;
+}
+.portInfo .driving-counts .unit{ 
+	color: #555994
+}
+.report .advices{ 
+	padding: 0.3rem 1.5rem;
+}
+.report .advices p{ 
+	text-align: left;
+	line-height: 2.4rem;
+}
+.remark{ 
+padding: 0.5rem 1.5rem;
+}
+.remark p{ 
+	text-align: left;
+	line-height: 2rem;
+	font-size: 1.1rem;
+}
+
+.payInfo{ 
+	padding: 2rem;
+	font-size: 1.2rem;
+}
+
+.payLists li{
+	overflow: hidden;
+	padding:0.5rem ;
+	border-bottom: 0.1rem solid #ddd;
+	list-style:none;
+	line-height: 4rem;
+}
+.payLists li .radio{ 
+	float: left;
+	margin: 0.8rem ;
+}
+.payLists .imgWrp{
+	width: 2.5rem;
+	display: block;
+	float: left;
+	line-height: 2.6rem;
+}
+.payLists .imgWrp img{
+	width:100%;
+	vertical-align: middle;
+}
+
+.payLists  h4{
+	margin:0 ;
+	font-size: 1.2rem;
+	margin-left:1rem ;
+	line-height: 2.6rem;
+	float: left;
+}
+
+/***
+******form style****
+**/
+.form-content{ 
+	border-bottom: 1px solid #ddd;
+	background: #fff;
+}
+
+.form-group { 
+	border-top:1px solid #ddd; 
+	margin-left: 1rem;
+	font-size: 1.3rem;
+	margin-bottom: 0.5rem;
+	position: relative;
+}
+
+.form-content .form-group:first-child{ 
+	border-top:none; 
+}
+.form-group .form-label{ 
+	width: 5rem;
+	text-align: left;
+	line-height: 4rem;
+	font-weight: normal;
+	margin: 0;
+}
+.form-group .form-input{ 
+	width: 18rem;
+	background: none;
+	height: 4rem;
+	padding: 1rem 0;
+	line-height: 4rem;
+}
+.form-group .right-icon{ 
+	top:1.5rem;
+	right: 1rem;
+	cursor: pointer;
+}
+.form-action{ 
+	width: 100%;
+	padding: 0 0.5rem;
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	margin-top: 1rem;
+}
+.form-action .btn{ 
+	margin: 0.5rem;
+	-moz-box-flex:1; /* Firefox */
+	-webkit-box-flex:1; /* Safari 和 Chrome */
+	-ms-box-flex:1; /* Safari 和 Chrome */
+	box-flex:1;
+	height: 4rem;
+	font-size: 1.3rem;
+	width: 100%;
+}
+.orange.btn{	
+	background: #ff9d00;
+	color: #fff;
+}
+.error-ele{ 
+	line-height: 2rem;
+	font-size: 1rem;
+	color: #ff5858;
+	padding: 0 1rem;
+}
+/***----------form style end----------****/
+.modal-header{ 
+	background: #ff9d00;
+	color: #fff;
+}
+.modal .dropdown-menu{ 
+	width: 100%;
+	display:block;
+	position: relative;
+	border: none;
+}
+.modal .dropdown-menu li{ 
+	border-bottom: 0.1rem solid #ddd;
+	padding: 0.5rem;
+}
+.modal .close{ 
+	display: inline-block;
+	position: absolute;
+	right: 1rem;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	line-height: 1.9rem;
+	color: #fff;
+}
+
+.modal-content{ 
+	max-height: 35rem;
+    overflow: auto;
+}
+#reminder p{ 
+	margin: 0.5rem 0;
+	line-height: 1.8rem;
+	font-size: 1.2rem;
+
+}
+/******layer style*********/
+
+.layer{ 
+	background: rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.layer .layer-wrpper{ 
+	width: 25%;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-top: 10%;
+	background: #fff;
+	position: relative;
+}
+.layer .layer-wrpper .layer-content{ 
+	padding: 20px 60px;
+}
+.layer .layer-close{ 
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 20px;
+
+}
+.layer .layer-close .icon{ 
+		display: block;
+		font-size: 18px;
+}

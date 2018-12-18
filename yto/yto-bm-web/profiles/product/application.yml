@@ -1,0 +1,25 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: ${web.application.name}
+  freemarker:
+    request-context-attribute: request
+    template-loader-path: classpath:/templates/ #模板加载路径 按需配置
+    settings:
+      number_format: 0.##
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka
+ribbon:
+  ReadTimeout: 120000
+  ConnectTimeout: 30000
+logging: 
+  config: classpath:log4j2.xml
+web:
+  application:
+    name: yto-web-bm-test
+service:
+  application:
+    name: yto-bm-service-test

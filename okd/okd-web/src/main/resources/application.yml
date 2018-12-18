@@ -1,0 +1,37 @@
+server:
+  port: 8006
+spring:
+  application:
+    name: ${web.application.name}
+  freemarker:
+    template-loader-path: classpath:/templates/views/ #模板加载路径 按需配置
+    settings:
+      number_format: 0.##
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.55.39:8001/eureka
+logging:
+  config: classpath:log4j2.xml
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+ribbon:
+  ConnectTimeout: 500
+  ReadTimeout: 6000
+  OkToRetryOnAllOperations: true
+  MaxAutoRetriesNextServer: 2
+  MaxAutoRetries: 1
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+business:
+  smsSendcode: YTCHECKCODE
+  messageurl: http://192.168.55.39:8089/sendSms
+  

@@ -1,0 +1,160 @@
+.gearArea {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    background-color: rgba(0,0,0,0.2);
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9900;
+    overflow: hidden;
+    -webkit-animation-fill-mode: both;
+     -moz-animation-fill-mode: both;
+    
+    font-family: "微软雅黑";
+}
+
+.area_ctrl {
+    vertical-align: middle;
+    background-color: #292829;
+    color: #FFF;
+    margin: 0;
+    height: auto;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0rem;
+    z-index: 9901;
+    overflow: hidden;
+    webkit-user-select: none;
+    moz-user-select: none;
+    
+
+}
+
+.slideInUp {
+    animation: slideInUp .3s ease-in;
+    -webkit-animation: slideInUp .3s ease-in;
+    -moz-animation: slideInUp .3s ease-in
+    
+}
+
+@-webkit-keyframes slideInUp {
+    from {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+        -moz-transform: translate3d(0, 100%, 0)
+        
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        
+    }
+}
+
+.area_roll {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: transparent;
+    -webkit-mask: -webkit-gradient(linear,left bottom,left top,from(#282828),color-stop(0.52, rgba(40,40,40,0)),color-stop(0.48, rgba(40,40,40,0)),to(#282828));
+    -webkit-mask: -webkit-linear-gradient(top, #282828 50%, rgba(40,40,40,0));
+    -moz-mask: -moz-gradient(linear,left bottom,left top,from(#282828),color-stop(0.52, rgba(40,40,40,0)),color-stop(0.48, rgba(40,40,40,0)),to(#282828));
+    -moz-mask: -moz-linear-gradient(top, #282828 50%, rgba(40,40,40,0))
+}
+
+.area_roll>div {
+    font-size: 1.3rem;
+    height: 15rem;
+    float: left;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1
+}
+
+.area_roll_mask {
+    -webkit-mask: -webkit-gradient(linear, 0% 40%, 0% 0%, from(#debb47), to(rgba(36,142,36,0)));
+    -moz-mask: -moz-gradient(linear, 0% 40%, 0% 0%, from(#debb47), to(rgba(36,142,36,0)));
+    
+}
+
+.area_grid {
+    position: relative;
+    top: 6rem;
+    width: 80%;
+    height: 3rem;
+    margin:0 auto;
+    box-sizing: border-box;
+    z-index: 0;
+    border-top: 2px solid #31b6e7;
+    border-bottom: 2px solid #31b6e7;
+}
+
+.area_roll>div:nth-child(3) .area_grid>div {
+    left: 42%
+}
+
+.area_btn {
+	width: 50%;
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 1rem;
+    text-align: center;
+    padding: 1.2rem 3rem;
+    cursor: pointer;
+    border-right: 0.1rem solid #424542;
+    border-bottom: 0.1rem solid #424542;
+    font-weight: normal;
+    box-flex:1.0;
+    -webkit-box-flex:1.0;
+    -moz-box-flex:1.0;
+}
+
+.area_btn_box {
+    display: box;
+    display: -webkit-box;
+    display: -moz-box;
+    -webkit-box-pack: justify;
+    -webkit-box-align: stretch;
+    -moz-box-pack: justify;
+    -moz-box-align: stretch;
+    width:100%;
+}
+
+.gear {
+    float: left;
+    position: absolute;
+    z-index: 9902;
+    width:5.5rem;
+    margin-top:6rem;
+}
+
+.area_roll>div .gear {
+    width: 100%
+}
+
+.tooth {
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    display: box;
+    display: -webkit-box;
+    display: -moz-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    -moz-line-clamp: 1;
+    -moz-box-orient: vertical;
+    overflow: hidden;
+    width:100%;
+}

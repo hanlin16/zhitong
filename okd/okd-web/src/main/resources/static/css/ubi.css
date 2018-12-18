@@ -1,0 +1,20 @@
+.pageindex{
+   height:595px;
+   margin-left: 25%;
+   margin-right: 25%;
+   border:1px solid #000;
+}
+.page-p{
+	text-align: center;
+	font-size: 20px;
+}
+.page-boom{
+	float: left;
+    width: 210px;
+    height: 70px;
+    margin-left: 10px;
+    text-align: center;
+    background: #8a84ab;
+    line-height: 70px;
+    cursor: pointer;
+}
